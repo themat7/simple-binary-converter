@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Random letter</title>
+    <link rel="stylesheet" type="text/css" href="http://55060509.webdevmmu.uk/style-guide/global.css" />
+
+</head>
+<body>
+<div class="container">
+
+    <h1>Binary converter</h1>
+    
+    <p>Type in a decimal number into the window </p>
+    
+<script>
+var remainder = window.prompt("Enter nubmer to be converted here");
+parseInt(remainder);
+var binaryOutput = "";
+
+var userInput = remainder;
+for(var i =256;i>=2;i /=2 ){//wasnt working cuz 
+if(remainder>=i){           //didnt use shorthand for i/2 fixed 
+binaryOutput += "1"; // follows commented out logic below
+remainder -=i;       // jsut looped 
+}
+else 
+{
+binaryOutput += "0"
+}
+}
+if(remainder== 1){// outside of loop because it occurs only once
+binaryOutput += "1";//for value of 1 or 0 ect
+
+}
+else{
+binaryOutput += "0";
+}
+
+document.write("The number " + userInput + " is " + binaryOutput + " in binary");
+/*
+if(remainder>=8){
+binaryOutput += "1";
+remainder -=8;
+}
+else 
+{
+binaryOutput += "0"
+}
+if(remainder>=4)
+{
+binaryOutput += "1";
+remainder -=4;
+}
+else{
+binaryOutput += "0";
+}
+console.log(remainder)
+
+if(remainder>=2){
+binaryOutput += "1";
+remainder -=2;
+}
+*/
+</script>
+</div>
+</body>
+</html>
